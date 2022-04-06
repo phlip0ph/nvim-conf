@@ -9,6 +9,9 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
+--Toggle Term Functions
+keymap("n", "<leader><leader>g", "<cmd>lua _LAZYGIT_TOGGLE()<cr>", opts) -- Close buffer
+
 --Window and Buffer Navigation
 keymap("n", "<leader>q", "<cmd>bd<cr>", opts) -- Close buffer
 keymap("n", "<S-l>", "<cmd>bnext<cr>", opts) -- Next buffer
@@ -18,7 +21,8 @@ keymap("n", "<S-h>", "<cmd>bprevious<cr>", opts) -- Last buffer
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 
 --Telescope
-keymap("n", "<leader><leader>p", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
+keymap("n", "<leader>o", "<cmd>Telescope projects<cr>", opts)
 
 --Hop
 	--Normal Mode

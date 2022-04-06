@@ -9,7 +9,8 @@ local options = {
 	termguicolors = true,
 	tabstop = 2,
 	shiftwidth = 2,
-	softtabstop = 2
+	softtabstop = 2,
+	shell = kitty
 }
 
 for k,v in pairs(options) do

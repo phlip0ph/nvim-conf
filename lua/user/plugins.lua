@@ -102,7 +102,24 @@ return packer.startup(function(use)
 		},
 		config = function() require'nvim-tree'.setup {} end
 	}
+
+	-- Lualine
+  use 'nvim-lualine/lualine.nvim' --Status line
+
+	-- Toggle Term
+  use "akinsho/toggleterm.nvim" --Toggleable Terminal
 	
+	-- Projects
+	use {
+		"ahmedkhalf/project.nvim",
+		config = function()
+			require("project_nvim").setup {}
+		end
+	}
+
+
+	-- Indent blankline
+	use "lukas-reineke/indent-blankline.nvim" -- Indentation indicators
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
