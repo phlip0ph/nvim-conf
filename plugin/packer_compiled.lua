@@ -69,10 +69,20 @@ end
 time([[try_loadstring definition]], false)
 time([[Defining packer_plugins]], true)
 _G.packer_plugins = {
+  ["Comment.nvim"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/Comment.nvim",
+    url = "https://github.com/numtoStr/Comment.nvim"
+  },
   LuaSnip = {
     loaded = true,
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/LuaSnip",
     url = "https://github.com/L3MON4D3/LuaSnip"
+  },
+  ["bufferline.nvim"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
+    url = "https://github.com/akinsho/bufferline.nvim"
   },
   ["cmp-buffer"] = {
     loaded = true,
@@ -109,11 +119,21 @@ _G.packer_plugins = {
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/friendly-snippets",
     url = "https://github.com/rafamadriz/friendly-snippets"
   },
+  ["gitsigns.nvim"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
+    url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
   ["hop.nvim"] = {
-    config = { "\27LJ\2\2X\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\31asdghklqwertyuiopzxcvbnmfj\nsetup\bhop\frequire\0" },
+    config = { "\27LJ\2\nX\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\31asdghklqwertyuiopzxcvbnmfj\nsetup\bhop\frequire\0" },
     loaded = true,
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/hop.nvim",
     url = "https://github.com/phaazon/hop.nvim"
+  },
+  ["nvim-autopairs"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
+    url = "https://github.com/windwp/nvim-autopairs"
   },
   ["nvim-cmp"] = {
     loaded = true,
@@ -130,6 +150,27 @@ _G.packer_plugins = {
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/nvim-lspconfig",
     url = "https://github.com/neovim/nvim-lspconfig"
   },
+  ["nvim-tree.lua"] = {
+    config = { "\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0" },
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/nvim-tree.lua",
+    url = "https://github.com/kyazdani42/nvim-tree.lua"
+  },
+  ["nvim-treesitter"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/nvim-treesitter",
+    url = "https://github.com/nvim-treesitter/nvim-treesitter"
+  },
+  ["nvim-ts-context-commentstring"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/nvim-ts-context-commentstring",
+    url = "https://github.com/JoosepAlviste/nvim-ts-context-commentstring"
+  },
+  ["nvim-web-devicons"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
+    url = "https://github.com/kyazdani42/nvim-web-devicons"
+  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -144,14 +185,38 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
+  },
+  ["telescope-media-files.nvim"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
+    url = "https://github.com/nvim-telescope/telescope-media-files.nvim"
+  },
+  ["telescope.nvim"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/telescope.nvim",
+    url = "https://github.com/nvim-telescope/telescope.nvim"
+  },
+  ["vim-bbye"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/vim-bbye",
+    url = "https://github.com/moll/vim-bbye"
+  },
+  ["vim-surround"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/vim-surround",
+    url = "https://github.com/tpope/vim-surround"
   }
 }
 
 time([[Defining packer_plugins]], false)
 -- Config for: hop.nvim
 time([[Config for hop.nvim]], true)
-try_loadstring("\27LJ\2\2X\0\0\2\0\4\0\a6\0\0\0'\1\1\0B\0\2\0029\0\2\0005\1\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\31asdghklqwertyuiopzxcvbnmfj\nsetup\bhop\frequire\0", "config", "hop.nvim")
+try_loadstring("\27LJ\2\nX\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\31asdghklqwertyuiopzxcvbnmfj\nsetup\bhop\frequire\0", "config", "hop.nvim")
 time([[Config for hop.nvim]], false)
+-- Config for: nvim-tree.lua
+time([[Config for nvim-tree.lua]], true)
+try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
+time([[Config for nvim-tree.lua]], false)
 if should_profile then save_profiles() end
 
 end)

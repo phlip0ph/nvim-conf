@@ -63,6 +63,15 @@ return packer.startup(function(use)
 	use "L3MON4D3/LuaSnip" -- Snippet Engine
 	use "rafamadriz/friendly-snippets" -- Snippet collection
 
+	-- Commenting
+	use "numtoStr/Comment.nvim" -- Easy commenting
+
+	-- Treesitter
+	use {
+		"nvim-treesitter/nvim-treesitter",
+		run = ":TSUpdate",
+	}
+	use "JoosepAlviste/nvim-ts-context-commentstring"
 
   --Colorschemes
   use "lunarvim/colorschemes" --Additional colorschemes
@@ -70,6 +79,30 @@ return packer.startup(function(use)
 	--Language Server Protocols
 	use "neovim/nvim-lspconfig" -- Enables LSPs
 	use "williamboman/nvim-lsp-installer" -- Simple LSP installer
+
+	-- Git
+	use "lewis6991/gitsigns.nvim" -- Git navigation and management
+
+	-- Telescope
+	use "nvim-telescope/telescope.nvim" -- Various fuzzy finding functions
+	use "nvim-telescope/telescope-media-files.nvim"
+	
+	-- Auto surround and pairing
+	use "tpope/vim-surround" -- Surround shortcuts
+	use "windwp/nvim-autopairs" -- Auto pairing
+
+	-- Buffers
+	use "akinsho/bufferline.nvim" --Bufferline
+	use "moll/vim-bbye"
+	
+	-- Tree Explorer
+	use {"kyazdani42/nvim-tree.lua", -- Tree Explorer
+		requires = {
+			use "kyazdani42/nvim-web-devicons", -- File icons
+		},
+		config = function() require'nvim-tree'.setup {} end
+	}
+	
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
