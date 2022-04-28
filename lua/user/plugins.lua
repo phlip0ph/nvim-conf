@@ -86,7 +86,7 @@ return packer.startup(function(use)
 	-- Telescope
 	use "nvim-telescope/telescope.nvim" -- Various fuzzy finding functions
 	use "nvim-telescope/telescope-media-files.nvim"
-	
+
 	-- Auto surround and pairing
 	use "tpope/vim-surround" -- Surround shortcuts
 	use "windwp/nvim-autopairs" -- Auto pairing
@@ -94,7 +94,7 @@ return packer.startup(function(use)
 	-- Buffers
 	use "akinsho/bufferline.nvim" --Bufferline
 	use "moll/vim-bbye"
-	
+
 	-- Tree Explorer
 	use {"kyazdani42/nvim-tree.lua", -- Tree Explorer
 		requires = {
@@ -108,7 +108,7 @@ return packer.startup(function(use)
 
 	-- Toggle Term
   use "akinsho/toggleterm.nvim" --Toggleable Terminal
-	
+
 	-- Projects
 	use {
 		"ahmedkhalf/project.nvim",
