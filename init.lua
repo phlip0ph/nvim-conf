@@ -1,6 +1,8 @@
 --Import user config files
 if ('g:vscode') then
-
+	require "vscode.plugins"
+	require "vscode.options"
+	require "vscode.keymaps"
 else
 	require "user.plugins"
 	require "user.colorscheme"
