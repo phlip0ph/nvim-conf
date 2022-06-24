@@ -1,5 +1,5 @@
 o = vim.opt
-
+--[[
 local options = {
 	number = true,
 	relativenumber = true,
@@ -16,4 +16,5 @@ local options = {
 for k,v in pairs(options) do
 	o[k] = v
 end
+--]]
 

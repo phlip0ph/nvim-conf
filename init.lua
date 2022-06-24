@@ -1,9 +1,5 @@
 --Import user config files
-if ('g:vscode') then
-	require "vscode.plugins"
-	require "vscode.options"
-	require "vscode.keymaps"
-else
+if vim.g.vscode == nil then
 	require "user.plugins"
 	require "user.colorscheme"
 	require "user.options"
@@ -21,4 +17,8 @@ else
 	require "user.lualine"
 	require "user.projects"
 	require "user.indent"
+else
+	require "vscode.plugins"
+	require "vscode.options"
+	require "vscode.keymaps"
 end
