@@ -18,7 +18,7 @@ if vim.g.vscode == nil then
 	require "user.projects"
 	require "user.indent"
 else
-	require "vscode.plugins"
+	require "user.plugins"
 	require "vscode.options"
 	require "vscode.keymaps"
 end

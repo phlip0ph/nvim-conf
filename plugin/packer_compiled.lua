@@ -202,6 +202,11 @@ _G.packer_plugins = {
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/project.nvim",
     url = "https://github.com/ahmedkhalf/project.nvim"
   },
+  ["suda.vim"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/suda.vim",
+    url = "https://github.com/lambdalisue/suda.vim"
+  },
   ["telescope-media-files.nvim"] = {
     loaded = true,
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/telescope-media-files.nvim",
@@ -222,6 +227,11 @@ _G.packer_plugins = {
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
+  ["vim-easymotion"] = {
+    loaded = true,
+    path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/vim-easymotion",
+    url = "https://github.com/asvetliakov/vim-easymotion"
+  },
   ["vim-surround"] = {
     loaded = true,
     path = "/home/phillipm/.local/share/nvim/site/pack/packer/start/vim-surround",
@@ -230,6 +240,10 @@ _G.packer_plugins = {
 }
 
 time([[Defining packer_plugins]], false)
+-- Config for: hop.nvim
+time([[Config for hop.nvim]], true)
+try_loadstring("\27LJ\2\nX\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\31asdghklqwertyuiopzxcvbnmfj\nsetup\bhop\frequire\0", "config", "hop.nvim")
+time([[Config for hop.nvim]], false)
 -- Config for: nvim-tree.lua
 time([[Config for nvim-tree.lua]], true)
 try_loadstring("\27LJ\2\n;\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\14nvim-tree\frequire\0", "config", "nvim-tree.lua")
@@ -238,10 +252,6 @@ time([[Config for nvim-tree.lua]], false)
 time([[Config for project.nvim]], true)
 try_loadstring("\27LJ\2\n>\0\0\3\0\3\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0004\2\0\0B\0\2\1K\0\1\0\nsetup\17project_nvim\frequire\0", "config", "project.nvim")
 time([[Config for project.nvim]], false)
--- Config for: hop.nvim
-time([[Config for hop.nvim]], true)
-try_loadstring("\27LJ\2\nX\0\0\3\0\4\0\a6\0\0\0'\2\1\0B\0\2\0029\0\2\0005\2\3\0B\0\2\1K\0\1\0\1\0\1\tkeys\31asdghklqwertyuiopzxcvbnmfj\nsetup\bhop\frequire\0", "config", "hop.nvim")
-time([[Config for hop.nvim]], false)
 if should_profile then save_profiles() end
 
 end)
