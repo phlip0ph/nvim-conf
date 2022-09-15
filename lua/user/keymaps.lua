@@ -37,3 +37,5 @@ keymap("", "F", "<cmd>HopChar1BC<cr>", opts)
 --Tile Navigation
 keymap("", "<leader>w", "<C-w>", opts)
 
+--Nvim Tree
+keymap("n", "<leader>t", ":NvimTreeToggle<cr>", term_opts) -- Close tab
