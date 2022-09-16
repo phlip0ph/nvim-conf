@@ -17,8 +17,8 @@ keymap("n", "<leader>q", "<cmd>bd<cr>", opts) -- Close buffer
 keymap("n", "<S-l>", "<cmd>bnext<cr>", opts) -- Next buffer
 keymap("n", "<S-h>", "<cmd>bprevious<cr>", opts) -- Last buffer
 
---Open lex explorer
-keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+--[[ --Open lex explorer ]]
+--[[ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts) ]]
 
 --Telescope
 keymap("n", "<leader>p", "<cmd>Telescope find_files<cr>", opts)
