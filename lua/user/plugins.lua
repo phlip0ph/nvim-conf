@@ -67,13 +67,16 @@ return packer.startup(function(use)
 				end
 			} -- Annotated document jumping and movement
 
-		--cmp plugins
-		use "hrsh7th/nvim-cmp" -- Completion plugin
-		use "hrsh7th/cmp-buffer" -- Buffer completion
-		use "hrsh7th/cmp-path" -- Path completion
-		use "hrsh7th/cmp-cmdline" -- cmdline completion
-		use "hrsh7th/cmp-nvim-lsp" -- LSP completion
-		use "saadparwaiz1/cmp_luasnip" -- snippet completion
+		--Completion plugins
+		use {"ms-jpq/coq_nvim", branch = 'coq'}
+		use {"ms-jpq/coq.thirdparty", branch = "3p"}
+		use {"ms-jpq/coq.artifacts", branch = "artifacts"}
+		--[[ use "hrsh7th/nvim-cmp" -- Completion plugin ]]
+		--[[ use "hrsh7th/cmp-buffer" -- Buffer completion ]]
+		--[[ use "hrsh7th/cmp-path" -- Path completion ]]
+		--[[ use "hrsh7th/cmp-cmdline" -- cmdline completion ]]
+		--[[ use "hrsh7th/cmp-nvim-lsp" -- LSP completion ]]
+		--[[ use "saadparwaiz1/cmp_luasnip" -- snippet completion ]]
 
 		-- snippets
 		use "L3MON4D3/LuaSnip" -- Snippet Engine
