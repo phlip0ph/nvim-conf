@@ -4,6 +4,7 @@ if vim.g.vscode == nil then
 	require "user.colorscheme"
 	require "user.options"
 	require "user.keymaps"
+	require "user.coq"
 --	require "user.lsp"
 	require "user.gitsigns"
 	require "user.comment"
