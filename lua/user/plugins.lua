@@ -82,6 +82,9 @@ return packer.startup(function(use)
 		use "L3MON4D3/LuaSnip" -- Snippet Engine
 		use "rafamadriz/friendly-snippets" -- Snippet collection
 
+		-- vue
+		use "leafOfTree/vim-vue-plugin" --Proper indentation plugin
+
 		-- Commenting
 		use "numtoStr/Comment.nvim" -- Easy commenting
 

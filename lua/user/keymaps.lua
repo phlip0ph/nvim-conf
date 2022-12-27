@@ -39,3 +39,6 @@ keymap("", "<leader>w", "<C-w>", opts)
 
 --Nvim Tree
 keymap("n", "<leader>t", ":NvimTreeToggle<cr>", term_opts) -- Close tab
+
+--Unhighlight
+keymap("n", "<leader>n", "<cmd>noh<cr>", opts)

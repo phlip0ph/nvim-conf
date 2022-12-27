@@ -17,6 +17,7 @@ if vim.g.vscode == nil then
 	require "user.lualine"
 	require "user.projects"
 	require "user.indent"
+	require "user.vuevim"
 else
 	require "user.plugins"
 	require "vscode.options"
