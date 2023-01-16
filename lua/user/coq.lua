@@ -10,7 +10,7 @@ vim.g.coq_settings = {
           weight_adjust = 1.0
         },
         tabnine = {
-          enabled = true,
+          enabled = false,
         },
         snippets = {
           user_path = '/home/phillipm/.config/nvim/lua/coq-user-snippets',

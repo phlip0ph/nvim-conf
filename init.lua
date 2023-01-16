@@ -5,7 +5,6 @@ if vim.g.vscode == nil then
 	require "user.options"
 	require "user.keymaps"
 	require "user.coq"
---	require "user.lsp"
 	require "user.gitsigns"
 	require "user.comment"
 	require "user.telescope"
@@ -18,6 +17,7 @@ if vim.g.vscode == nil then
 	require "user.projects"
 	require "user.indent"
 	require "user.vuevim"
+	require "user.lspconfig"
 else
 	require "user.plugins"
 	require "vscode.options"

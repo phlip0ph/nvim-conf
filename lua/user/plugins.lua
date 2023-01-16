@@ -49,9 +49,8 @@ if nocode == 0 then
 	}
 end
 
--- Install your plugins here
+-- User Plugins
 return packer.startup(function(use)
-  -- My plugins here
   use "wbthomason/packer.nvim" -- Have packer manage itself
 	if iscode then
 		use "asvetliakov/vim-easymotion" --Easy jump keys
@@ -80,7 +79,7 @@ return packer.startup(function(use)
 
 		-- snippets
 		use "L3MON4D3/LuaSnip" -- Snippet Engine
-		use "rafamadriz/friendly-snippets" -- Snippet collection
+		--[[ use "rafamadriz/friendly-snippets" -- Snippet collection ]]
 
 		-- vue
 		use "leafOfTree/vim-vue-plugin" --Proper indentation plugin
@@ -100,7 +99,13 @@ return packer.startup(function(use)
 
 		--Language Server Protocols
 		use "neovim/nvim-lspconfig" -- Enables LSPs
-		use "williamboman/nvim-lsp-installer" -- Simple LSP installer
+		use {  -- External editing tool installer (LSPs, Linters, etc.)
+			"williamboman/mason.nvim" ,
+			config = function() require("mason").setup() end
+		}
+		use "williamboman/mason-lspconfig.nvim" -- Bridges mason.nvim and lspconfig
+		use "mfussenegger/nvim-lint" --Async linter for use with mason.nvim
+		--use "williamboman/nvim-lsp-installer" -- Simple LSP installer [Unmaintained, do not use]
 
 		-- Git
 		use "lewis6991/gitsigns.nvim" -- Git navigation and management
