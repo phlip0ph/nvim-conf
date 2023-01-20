@@ -3,16 +3,16 @@ local fn = vim.fn
 --Automatically install pakcer
 local install_path = fn.stdpath "data" .. "/site/pack/packer/start/packer.nvim"
 if fn.empty(fn.glob(install_path)) > 0 then
-  PACKER_BOOTSTRAP = fn.system {
-    "git",
-    "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
-    install_path,
-  }
-  print "Installing packer close and reopen Neovim..."
-  vim.cmd [[packadd packer.nvim]]
+	PACKER_BOOTSTRAP = fn.system {
+		"git",
+		"clone",
+		"--depth",
+		"1",
+		"https://github.com/wbthomason/packer.nvim",
+		install_path,
+	}
+	print "Installing packer close and reopen Neovim..."
+	vim.cmd [[packadd packer.nvim]]
 end
 
 -- Autocommand that reloads neovim whenever you save the plugins.lua file
@@ -26,16 +26,16 @@ vim.cmd [[
 -- Use a protected call so we don't error out on first use
 local status_ok, packer = pcall(require, "packer")
 if not status_ok then
-  return
+	return
 end
 
 
 local nocode = function()
-  return vim.fn.exists('g:vscode') == 0
+	return vim.fn.exists('g:vscode') == 0
 end
 
 local iscode = function()
-  return vim.fn.exists('g:vscode') == 1
+	return vim.fn.exists('g:vscode') == 1
 end
 
 -- Have packer use a popup window
@@ -51,25 +51,25 @@ end
 
 -- User Plugins
 return packer.startup(function(use)
-  use "wbthomason/packer.nvim" -- Have packer manage itself
+	use "wbthomason/packer.nvim" -- Have packer manage itself
 	if iscode then
 		use "asvetliakov/vim-easymotion" --Easy jump keys
 	end
 	if nocode then
-		use {"nvim-lua/popup.nvim"} -- An implementation of the Popup API from vim in Neovim
+		use { "nvim-lua/popup.nvim" } -- An implementation of the Popup API from vim in Neovim
 		use "nvim-lua/plenary.nvim" -- Useful lua functions used in lots of plugins
 		use "lambdalisue/suda.vim" -- Useful lua functions used in lots of plugins
-		use {"phaazon/hop.nvim",
-					branch = 'v1',
-					config = function()
-					require'hop'.setup { keys = 'asdghklqwertyuiopzxcvbnmfj'}
-				end
-			} -- Annotated document jumping and movement
+		use { "phaazon/hop.nvim",
+			branch = 'v1',
+			config = function()
+				require 'hop'.setup { keys = 'asdghklqwertyuiopzxcvbnmfj' }
+			end
+		} -- Annotated document jumping and movement
 
 		--Completion plugins
-		use {"ms-jpq/coq_nvim", branch = 'coq'}
-		use {"ms-jpq/coq.thirdparty", branch = "3p"}
-		use {"ms-jpq/coq.artifacts", branch = "artifacts"}
+		use { "ms-jpq/coq_nvim", branch = 'coq' }
+		use { "ms-jpq/coq.thirdparty", branch = "3p" }
+		use { "ms-jpq/coq.artifacts", branch = "artifacts" }
 		--[[ use "hrsh7th/nvim-cmp" -- Completion plugin ]]
 		--[[ use "hrsh7th/cmp-buffer" -- Buffer completion ]]
 		--[[ use "hrsh7th/cmp-path" -- Path completion ]]
@@ -85,22 +85,27 @@ return packer.startup(function(use)
 		use "leafOfTree/vim-vue-plugin" --Proper indentation plugin
 
 		-- Commenting
-		use "numtoStr/Comment.nvim" -- Easy commenting
+		use {
+			"numtoStr/Comment.nvim",
+			config = function()
+				require('Comment').setup()
+			end
+		} -- Easy commenting
 
 		-- Treesitter
 		use {
 			"nvim-treesitter/nvim-treesitter",
 			run = ":TSUpdate",
 		}
-		use "JoosepAlviste/nvim-ts-context-commentstring"
+		use "JoosepAlviste/nvim-ts-context-commentstring" --Enable jsx and tsx commenting
 
 		--Colorschemes
 		use "lunarvim/colorschemes" --Additional colorschemes
 
 		--Language Server Protocols
 		use "neovim/nvim-lspconfig" -- Enables LSPs
-		use {  -- External editing tool installer (LSPs, Linters, etc.)
-			"williamboman/mason.nvim" ,
+		use { -- External editing tool installer (LSPs, Linters, etc.)
+			"williamboman/mason.nvim",
 			config = function() require("mason").setup() end
 		}
 		use "williamboman/mason-lspconfig.nvim" -- Bridges mason.nvim and lspconfig
@@ -111,7 +116,7 @@ return packer.startup(function(use)
 		use "lewis6991/gitsigns.nvim" -- Git navigation and management
 
 		-- Telescope
-		use "nvim-telescope/telescope.nvim" -- Various fuzzy finding functions
+		use "nvim-telescope/telescope.nvim" -- Various fuzzy finding functions including finding files and text in files
 		use "nvim-telescope/telescope-media-files.nvim"
 
 		-- Auto surround and pairing
@@ -123,11 +128,11 @@ return packer.startup(function(use)
 		use "moll/vim-bbye"
 
 		-- Tree Explorer
-		use {"kyazdani42/nvim-tree.lua", -- Tree Explorer
+		use { "kyazdani42/nvim-tree.lua", -- Tree Explorer
 			requires = {
 				use "kyazdani42/nvim-web-devicons", -- File icons
 			},
-			config = function() require'nvim-tree'.setup {} end
+			config = function() require 'nvim-tree'.setup {} end
 		}
 
 		-- Lualine
@@ -138,7 +143,7 @@ return packer.startup(function(use)
 
 		-- Projects
 		use {
-			"ahmedkhalf/project.nvim",
+			"ahmedkhalf/project.nvim", --Allows for project folders
 			config = function()
 				require("project_nvim").setup {}
 			end
@@ -149,9 +154,9 @@ return packer.startup(function(use)
 		use "lukas-reineke/indent-blankline.nvim" -- Indentation indicators
 	end
 
-  -- Automatically set up your configuration after cloning packer.nvim
-  -- Put this at the end after all plugins
-  if PACKER_BOOTSTRAP then
-    require("packer").sync()
-  end
+	-- Automatically set up your configuration after cloning packer.nvim
+	-- Put this at the end after all plugins
+	if PACKER_BOOTSTRAP then
+		require("packer").sync()
+	end
 end)
