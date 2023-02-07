@@ -101,6 +101,8 @@ return packer.startup(function(use)
 
 		--Colorschemes
 		use "lunarvim/colorschemes" --Additional colorschemes
+		use "sainnhe/sonokai" --Colorscheme
+		use "sainnhe/everforest" --Colorscheme
 
 		--Language Server Protocols
 		use "neovim/nvim-lspconfig" -- Enables LSPs
@@ -149,10 +151,14 @@ return packer.startup(function(use)
 			end
 		}
 
-
 		-- Indent blankline
 		use "lukas-reineke/indent-blankline.nvim" -- Indentation indicators
+
+		--Markdown Preview
+		use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
+			setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
 	end
+
 
 	-- Automatically set up your configuration after cloning packer.nvim
 	-- Put this at the end after all plugins
