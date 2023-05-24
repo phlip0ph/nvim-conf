@@ -2,6 +2,7 @@ local configs = require("nvim-treesitter.configs")
 configs.setup {
 	ensure_installed = "all",
 	sync_install = false,
+	autotag = { enable = true },
 	context_commentstring = { enable = true },
 	ignore_install = { "" }, -- List of parsers to ignore installing
 	highlight = {

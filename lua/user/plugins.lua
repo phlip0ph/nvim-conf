@@ -98,6 +98,7 @@ return packer.startup(function(use)
 			run = ":TSUpdate",
 		}
 		use "JoosepAlviste/nvim-ts-context-commentstring" --Enable jsx and tsx commenting
+		use "windwp/nvim-ts-autotag"
 
 		--Colorschemes
 		use "lunarvim/colorschemes" --Additional colorschemes
@@ -157,6 +158,9 @@ return packer.startup(function(use)
 		--Markdown Preview
 		use({ "iamcco/markdown-preview.nvim", run = "cd app && npm install",
 			setup = function() vim.g.mkdp_filetypes = { "markdown" } end, ft = { "markdown" }, })
+
+		--Codeium AI Assistant
+		use 'Exafunction/codeium.vim'
 	end
 
 
